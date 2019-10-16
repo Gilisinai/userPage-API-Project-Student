@@ -37,7 +37,7 @@
     {{#each users}}
     <img id="profile-pic" src={{this.picture.large}}>
 <span>{{this.name.first}}  {{this.name.last}}</span>
-<span>{{this.location.city}}  {{this.location.state}}</span>
+<span>{{this.location.city}} , {{this.location.state}}</span>
      {{/each}}
 
 </script>
@@ -53,11 +53,15 @@
     </script>
 
 <script id="fourth-template" type="text/x-handlebars-template">
-      <img id="pokemon-image" src={{this}}>
+    
+      <img id="pokemon-image" src={{this.sprites.front_default}}>
+      <span>Favorite pokemon: {{this.name}}</span>
+      
         </script>
 
 <script id="fifth-template" type="text/x-handlebars-template">
-       {{this}}
+    <h4>About me</h4>
+     <p>{{this}}</p>  
         </script>
 
 

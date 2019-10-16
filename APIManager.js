@@ -1,4 +1,4 @@
-//This is the class that will manage all your APIs
+
 
 class APIManager {
     constructor() {
@@ -33,26 +33,25 @@ class APIManager {
             dataType: 'json',
             success: (data1) => {
                 this.data.quote = data1
-                // console.log(this.data)
-                // console.log(this.data.quote)
+                
             }
           });
     }
 
     loadPokemon() {
         $.ajax({
-            url: 'https://pokeapi.co/api/v2/pokemon/110',
+            url: `https://pokeapi.co/api/v2/pokemon/${Math.floor(Math.random()*130)}`,
             dataType: 'json',
             success: (data1) => {
-                this.data.pokemon = data1.sprites.front_default
-                console.log(this.data)
+                this.data.pokemon = data1
+                
             }
           });
     }
 
     loadMeat() {
         $.ajax({
-            url: 'https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1',
+            url: 'https://baconipsum.com/api/?type=all-meat&paras=1&start-with-lorem=1',
             dataType: 'json',
             success: (data1) => {
                 this.data.meat = data1
