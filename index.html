@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,62 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="user-container"></div>
+        <div class="quote-container">
 
+        </div>
+        <div class="content-container">
+            <div class="pokemon-container"></div>
+            <div class="meat-container"></div>
+        </div>
+        <div class="friends">
+            <h4>Friends</h4>
+            <div class="friends-container">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="load">Load User Data</button>
+            <button id="display">Display User</button>
+        </div>
+    </div>
+
+    <script id="first-template" type="text/x-handlebars-template">
+    {{#each users}}
+    <img id="profile-pic" src={{this.picture.large}}>
+<span>{{this.name.first}}  {{this.name.last}}</span>
+<span>{{this.location.city}}  {{this.location.state}}</span>
+     {{/each}}
+
+</script>
+
+    <script id="second-template" type="text/x-handlebars-template">
+{{this.quote}}
+</script>
+
+    <script id="third-template" type="text/x-handlebars-template">
+    {{#each users}}
+    <div>{{this.name.first}}</div>
+         {{/each}}
+    </script>
+
+<script id="fourth-template" type="text/x-handlebars-template">
+      <img id="pokemon-image" src={{this}}>
+        </script>
+
+<script id="fifth-template" type="text/x-handlebars-template">
+       {{this}}
+        </script>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="APIManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
