@@ -30,6 +30,16 @@
         <div class="buttons">
             <button id="load">Load User Data</button>
             <button id="display">Display User</button>
+            <button id="save">Save User Page</button>
+            
+            
+        </div>
+        <div class="dropdown">
+            <button id="storage">Load Saved User</button>
+            <div class="dropdown-content">
+                
+                
+              </div>
         </div>
     </div>
 
@@ -63,6 +73,12 @@
     <h4>About me</h4>
      <p>{{this}}</p>  
         </script>
+
+<script id="sixth-template" type="text/x-handlebars-template">
+    {{#each storage}}
+   <div class="saved-names">{{this}}</div>
+   {{/each}}
+</script>
 
 
 

@@ -12,6 +12,7 @@ class APIManager {
             dataType: 'json',
             success: (data1) => {
                 this.data.users = data1.results
+                console.log(this.data.users[0].name.first)
             }
           });
     }
@@ -66,6 +67,11 @@ class APIManager {
         this.loadKanye()
         this.loadPokemon()
         this.loadMeat()
+    }
+
+    saveUserData() {
+        
+        localStorage.setItem(this.data.users[0].name.first, JSON.stringify(this.data)) 
     }
 }
 
